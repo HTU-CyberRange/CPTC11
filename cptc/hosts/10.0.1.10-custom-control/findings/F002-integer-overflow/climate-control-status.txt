@@ -1,0 +1,23 @@
+Lido Deck Climate Control
+		______________________
+		LIDO DECK CLIMATE CONTROL SYSTEM
+		______________________
+		COMMANDS:
+		- STATUS	: View system status 
+		- SET		: Set temperature 
+		- REBOOT	: Restart system 
+		- EXIT 		: Disconnect 
+		______________________
+		: 
+Set point is: 999999999999999959416724456350362731491996089648451439669739009806703922950954425516032.0°C
+
+		______________________
+		LIDO DECK CLIMATE CONTROL SYSTEM
+		______________________
+		COMMANDS:
+		- STATUS	: View system status 
+		- SET		: Set temperature 
+		- REBOOT	: Restart system 
+		- EXIT 		: Disconnect 
+		______________________
+		: Bye!

@@ -1,0 +1,55 @@
+Network Topology Discovery via LibreChat Postgres MCP
+========================================================
+Source: Database queries through LibreChat MCP server
+Date: 2026-01-09
+Finding: F001 - Unauthorized Database Access
+
+DISCOVERED NETWORKS AND HOSTS:
+
+PUBLIC IP ADDRESSES:
+  52.18.45.123      - AWS production server
+  203.45.67.89      - External partner
+
+PRIVATE NETWORKS (RFC 1918):
+  10.0.0.0/24       - Internal application network (DIFFERENT from our target 10.0.1.0/24)
+  10.0.0.5          - Web backend server
+  192.168.1.50      - Legacy system
+
+DOCKER NETWORKS (RFC 1918):
+  172.18.0.0/16     - Docker bridge network
+  172.18.0.1        - Docker gateway
+  172.18.0.2        - PostgreSQL container (likely the database we are querying)
+
+NOT REFERENCED:
+  10.0.1.0/24       - Our current target network - NO REFERENCES FOUND
+
+ANALYSIS:
+
+1. Network Segmentation:
+   - Current target network (10.0.1.0/24) appears separate from application network (10.0.0.0/24)
+   - This database may serve the 10.0.0.0/24 network primarily
+   - Possible network isolation or separate deployment
+
+2. Infrastructure Findings:
+   - AWS presence confirms cloud infrastructure (52.18.45.123)
+   - PostgreSQL runs in Docker container (172.18.0.2)
+   - External partner integration exists (203.45.67.89)
+   - Legacy system still in use (192.168.1.50)
+
+3. Security Implications:
+   - Database contains references to production AWS infrastructure
+   - External partner IP addresses stored in database
+   - Docker network details exposed
+   - Internal network topology mappable through database content
+
+4. Questions for Validation:
+   - Is 10.0.0.0/24 network accessible from 10.0.1.0/24?
+   - Does database contain credentials for AWS or partner systems?
+   - Can we pivot to 10.0.0.0/24 network through discovered information?
+   - What data exists about the legacy system at 192.168.1.50?
+
+NEXT STEPS:
+- Search database for credentials associated with these IPs
+- Look for connection strings or API keys for AWS/partner systems
+- Enumerate what services run on 10.0.0.5 (web backend)
+- Check if database contains VPN or network access credentials

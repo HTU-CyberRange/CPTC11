@@ -1,0 +1,2 @@
+notBefore=Aug 17 14:27:45 2025 GMT
+notAfter=Nov 15 14:27:44 2025 GMT

@@ -1,0 +1,98 @@
+Connecting to 10.0.1.99
+Can't use SSL_get_servername
+depth=2 C=US, O=Internet Security Research Group, CN=ISRG Root X1
+verify return:1
+depth=1 C=US, O=Let's Encrypt, CN=E5
+verify return:1
+depth=0 CN=*.allports.tours
+verify error:num=10:certificate has expired
+notAfter=Nov 15 14:27:44 2025 GMT
+verify return:1
+depth=0 CN=*.allports.tours
+notAfter=Nov 15 14:27:44 2025 GMT
+verify return:1
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:CN=*.allports.tours
+   i:C=US, O=Let's Encrypt, CN=E5
+   a:PKEY: EC, (prime256v1); sigalg: ecdsa-with-SHA384
+   v:NotBefore: Aug 17 14:27:45 2025 GMT; NotAfter: Nov 15 14:27:44 2025 GMT
+ 1 s:C=US, O=Let's Encrypt, CN=E5
+   i:C=US, O=Internet Security Research Group, CN=ISRG Root X1
+   a:PKEY: EC, (secp384r1); sigalg: sha256WithRSAEncryption
+   v:NotBefore: Mar 13 00:00:00 2024 GMT; NotAfter: Mar 12 23:59:59 2027 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDjjCCAxSgAwIBAgISBY1iqRNoyMbp/Z+2e6y/q5JuMAoGCCqGSM49BAMDMDIx
+CzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJF
+NTAeFw0yNTA4MTcxNDI3NDVaFw0yNTExMTUxNDI3NDRaMBsxGTAXBgNVBAMMECou
+YWxscG9ydHMudG91cnMwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARy0sELC+nJ
++aQOnfWnd/lQS/sDhkIo8p+Xy4FSLW3XBV0deoqn961VxDGJPkZrgRLLOtAUrfje
+xW/Oy7VX5Xbuo4ICHzCCAhswDgYDVR0PAQH/BAQDAgeAMB0GA1UdJQQWMBQGCCsG
+AQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBRc1BA6XeHS
+esaNVQ7sehu+7KvNvjAfBgNVHSMEGDAWgBSfK1/PPCFPnQS37SssxMZwi9LXDTAy
+BggrBgEFBQcBAQQmMCQwIgYIKwYBBQUHMAKGFmh0dHA6Ly9lNS5pLmxlbmNyLm9y
+Zy8wGwYDVR0RBBQwEoIQKi5hbGxwb3J0cy50b3VyczATBgNVHSAEDDAKMAgGBmeB
+DAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vZTUuYy5sZW5jci5vcmcvMTEx
+LmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB1AO08S9boBsKkogBX28sk4jgB
+31Ev7cSGxXAPIN23Pj/gAAABmLijbvMAAAQDAEYwRAIgekgVDZTz/PGzKl7QTiq3
+Sn359E0hVEx807iGgQnJ+uQCICpVZG1pxspiPQnaKH4HB4+nV6gQDECiEcRXSlhm
+hg93AHcA3dzKNJXX4RYF55Uy+sef+D0cUN/bADoUEnYKLKy7yCoAAAGYuKN3YgAA
+BAMASDBGAiEA3bCtE701ab6oK5lxgDvEPQaWrK43QH+L9OKVmPVjJroCIQCau1DG
+ELWynMTxEW2O2dImgYSFv/qUNXWD0dVP98BReTAKBggqhkjOPQQDAwNoADBlAjEA
+yC6i7JyxDYT4MsPXzvSPIZY2kPlfxufwVDX1JAupyIlSEbLRj8fYPp0f5pZIB3aR
+AjAlNSB77YlPSXFA8WRkcwysidQ4BO9fQQBXrLF3F3XAhMTPo6PLxyIiyfLPonn6
+SVw=
+-----END CERTIFICATE-----
+subject=CN=*.allports.tours
+issuer=C=US, O=Let's Encrypt, CN=E5
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: ecdsa_secp256r1_sha256
+Negotiated TLS1.3 group: X25519MLKEM768
+---
+SSL handshake has read 3478 bytes and written 1724 bytes
+Verification error: certificate has expired
+---
+New, TLSv1.3, Cipher is TLS_AES_128_GCM_SHA256
+Protocol: TLSv1.3
+Server public key is 256 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 10 (certificate has expired)
+---
+DONE
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_128_GCM_SHA256
+    Session-ID: 62633B3B70449687E3D1F09F78F3DE7B2690EB19A502DCAB9C997B08E7D62095
+    Session-ID-ctx: 
+    Resumption PSK: 02AF48A570F1D3E3D1ED234562E1DDAF64CCB9C4DB85D9FB30D4838C8BADFC84
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 604800 (seconds)
+    TLS session ticket:
+    0000 - 2e 48 d8 bd f0 06 cb bc-d0 88 5e 35 8c c7 df 96   .H........^5....
+    0010 - 61 8f 2c b7 cb 23 71 3b-6a 00 b3 e9 7a b7 f9 ae   a.,..#q;j...z...
+    0020 - 52 82 06 63 1e c1 9c eb-ea 57 f6 0b 2d c5 ad 28   R..c.....W..-..(
+    0030 - 2a 69 d7 50 e1 33 9f 6f-8c af cd dc cf 36 ab dc   *i.P.3.o.....6..
+    0040 - ed 86 fe b1 b2 0a 83 bb-9f c3 af 45 21 ac 3c 7d   ...........E!.<}
+    0050 - c6 28 18 be 0e ad 47 16-c5 21 7b a3 29 5e 83 77   .(....G..!{.)^.w
+    0060 - b8 84 f2 ce db ae ba a0-2a                        ........*
+
+    Start Time: 1768079207
+    Timeout   : 7200 (sec)
+    Verify return code: 10 (certificate has expired)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK

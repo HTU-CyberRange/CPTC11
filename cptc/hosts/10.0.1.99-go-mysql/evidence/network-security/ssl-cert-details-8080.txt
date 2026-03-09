@@ -1,0 +1,76 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            05:8d:62:a9:13:68:c8:c6:e9:fd:9f:b6:7b:ac:bf:ab:92:6e
+        Signature Algorithm: ecdsa-with-SHA384
+        Issuer: C=US, O=Let's Encrypt, CN=E5
+        Validity
+            Not Before: Aug 17 14:27:45 2025 GMT
+            Not After : Nov 15 14:27:44 2025 GMT
+        Subject: CN=*.allports.tours
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:72:d2:c1:0b:0b:e9:c9:f9:a4:0e:9d:f5:a7:77:
+                    f9:50:4b:fb:03:86:42:28:f2:9f:97:cb:81:52:2d:
+                    6d:d7:05:5d:1d:7a:8a:a7:f7:ad:55:c4:31:89:3e:
+                    46:6b:81:12:cb:3a:d0:14:ad:f8:de:c5:6f:ce:cb:
+                    b5:57:e5:76:ee
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                5C:D4:10:3A:5D:E1:D2:7A:C6:8D:55:0E:EC:7A:1B:BE:EC:AB:CD:BE
+            X509v3 Authority Key Identifier: 
+                9F:2B:5F:CF:3C:21:4F:9D:04:B7:ED:2B:2C:C4:C6:70:8B:D2:D7:0D
+            Authority Information Access: 
+                CA Issuers - URI:http://e5.i.lencr.org/
+            X509v3 Subject Alternative Name: 
+                DNS:*.allports.tours
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.1
+            X509v3 CRL Distribution Points: 
+                Full Name:
+                  URI:http://e5.c.lencr.org/111.crl
+
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : ED:3C:4B:D6:E8:06:C2:A4:A2:00:57:DB:CB:24:E2:38:
+                                01:DF:51:2F:ED:C4:86:C5:70:0F:20:DD:B7:3E:3F:E0
+                    Timestamp : Aug 17 15:26:15.283 2025 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:44:02:20:7A:48:15:0D:94:F3:FC:F1:B3:2A:5E:D0:
+                                4E:2A:B7:4A:7D:F9:F4:4D:21:54:4C:7C:D3:B8:86:81:
+                                09:C9:FA:E4:02:20:2A:55:64:6D:69:C6:CA:62:3D:09:
+                                DA:28:7E:07:07:8F:A7:57:A8:10:0C:40:A2:11:C4:57:
+                                4A:58:66:86:0F:77
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : DD:DC:CA:34:95:D7:E1:16:05:E7:95:32:FA:C7:9F:F8:
+                                3D:1C:50:DF:DB:00:3A:14:12:76:0A:2C:AC:BB:C8:2A
+                    Timestamp : Aug 17 15:26:17.442 2025 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:46:02:21:00:DD:B0:AD:13:BD:35:69:BE:A8:2B:99:
+                                71:80:3B:C4:3D:06:96:AC:AE:37:40:7F:8B:F4:E2:95:
+                                98:F5:63:26:BA:02:21:00:9A:BB:50:C6:10:B5:B2:9C:
+                                C4:F1:11:6D:8E:D9:D2:26:81:84:85:BF:FA:94:35:75:
+                                83:D1:D5:4F:F7:C0:51:79
+    Signature Algorithm: ecdsa-with-SHA384
+    Signature Value:
+        30:65:02:31:00:c8:2e:a2:ec:9c:b1:0d:84:f8:32:c3:d7:ce:
+        f4:8f:21:96:36:90:f9:5f:c6:e7:f0:54:35:f5:24:0b:a9:c8:
+        89:52:11:b2:d1:8f:c7:d8:3e:9d:1f:e6:96:48:07:76:91:02:
+        30:25:35:20:7b:ed:89:4f:49:71:40:f1:64:64:73:0c:ac:89:
+        d4:38:04:ef:5f:41:00:57:ac:b1:77:17:75:c0:84:c4:cf:a3:
+        a3:cb:c7:22:22:c9:f2:cf:a2:79:fa:49:5c

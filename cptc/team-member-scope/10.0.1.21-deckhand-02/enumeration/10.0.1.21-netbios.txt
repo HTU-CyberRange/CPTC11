@@ -1,0 +1,2 @@
+Doing NBT name scan for addresses from 10.0.1.21
+

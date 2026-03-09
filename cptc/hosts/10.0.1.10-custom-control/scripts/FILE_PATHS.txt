@@ -1,0 +1,24 @@
+BALLAST EXPLOITATION SCRIPT - FILE PATHS REFERENCE
+==================================================
+
+MAIN SCRIPT:
+  /home/pentester/cptc/hosts/10.0.1.10-custom-control/scripts/ballast-exploit.py
+
+DOCUMENTATION:
+  /home/pentester/cptc/hosts/10.0.1.10-custom-control/scripts/README.md
+  /home/pentester/cptc/hosts/10.0.1.10-custom-control/scripts/QUICKSTART.txt
+  /home/pentester/cptc/hosts/10.0.1.10-custom-control/scripts/FILE_PATHS.txt (this file)
+
+EVIDENCE DIRECTORY:
+  /home/pentester/cptc/hosts/10.0.1.10-custom-control/evidence/ballast-exploitation/
+
+RELATED FINDINGS:
+  /home/pentester/cptc/findings/validated/F005-ballast-auth/
+
+ORIGINAL ENUMERATION:
+  /home/pentester/cptc/hosts/10.0.1.10-custom-control/enumeration/ballast-*.txt
+
+QUICK COMMANDS:
+  cd /home/pentester/cptc/hosts/10.0.1.10-custom-control/scripts
+  python3 ballast-exploit.py --all
+  ls -lah ../evidence/ballast-exploitation/

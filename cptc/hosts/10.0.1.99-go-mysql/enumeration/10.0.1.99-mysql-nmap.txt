@@ -1,0 +1,17 @@
+# Nmap 7.95 scan initiated Fri Jan  9 13:53:18 2026 as: /usr/lib/nmap/nmap --privileged -p 3306 --script mysql-info,mysql-databases,mysql-variables -oN /home/pentester/cptc/database-testing/10.0.1.99-mysql-nmap.txt 10.0.1.99
+Nmap scan report for 10.0.1.99
+Host is up (0.00054s latency).
+
+PORT     STATE SERVICE
+3306/tcp open  mysql
+| mysql-info: 
+|   Protocol: 10
+|   Version: 8.0.43
+|   Thread ID: 229
+|   Capabilities flags: 65535
+|   Some Capabilities: Support41Auth, SwitchToSSLAfterHandshake, ConnectWithDatabase, ODBCClient, FoundRows, DontAllowDatabaseTableColumn, Speaks41ProtocolOld, SupportsTransactions, IgnoreSpaceBeforeParenthesis, LongColumnFlag, IgnoreSigpipes, InteractiveClient, SupportsCompression, LongPassword, Speaks41ProtocolNew, SupportsLoadDataLocal, SupportsMultipleStatments, SupportsMultipleResults, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: \x1C8]H[%TX\x14~4y\x13\x14\x0F*\x7FU&^
+|_  Auth Plugin Name: caching_sha2_password
+
+# Nmap done at Fri Jan  9 13:53:18 2026 -- 1 IP address (1 host up) scanned in 0.24 seconds

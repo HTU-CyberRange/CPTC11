@@ -1,0 +1,11 @@
+Lido Deck Climate Control
+		______________________
+		LIDO DECK CLIMATE CONTROL SYSTEM
+		______________________
+		COMMANDS:
+		- STATUS	: View system status 
+		- SET		: Set temperature 
+		- REBOOT	: Restart system 
+		- EXIT 		: Disconnect 
+		______________________
+		: Bye!

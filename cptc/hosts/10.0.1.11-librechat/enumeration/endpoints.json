@@ -1,0 +1,1 @@
+{"agents":{"userProvide":false,"capabilities":["execute_code","file_search","web_search","artifacts","actions","context","tools","chain","ocr"],"order":1,"disableBuilder":false},"anthropic":{"userProvide":true,"order":8},"ollama":{"order":9999,"type":"custom","userProvide":false,"userProvideURL":false,"modelDisplayLabel":"Ollama"}}

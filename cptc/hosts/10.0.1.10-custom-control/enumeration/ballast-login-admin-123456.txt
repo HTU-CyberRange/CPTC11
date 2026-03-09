@@ -1,0 +1,4 @@
+Ballast Control System
+Authentication Required (LOGIN <user> <pass>)
+> Invalid credentials.
+> 

@@ -1,0 +1,783 @@
+```
+
+# Nmap 7.95 scan initiated Fri Jan  9 10:21:35 2026 as: /usr/lib/nmap/nmap -sV -sC -A -p- -iL ips1 -o nmap-full
+Nmap scan report for 10.0.1.1
+Host is up (0.00080s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE    VERSION
+53/tcp open  tcpwrapped
+Device type: general purpose|router
+Running: Linux 5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 5.0 - 5.14, MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 2 hops
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   3.20 ms 10.0.1.1
+
+Nmap scan report for 10.0.1.6
+Host is up (0.00089s latency).
+Not shown: 65506 closed tcp ports (reset)
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain        Simple DNS Plus
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2026-01-09 15:21:57Z)
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: allports.local0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds?
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: allports.local0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=APT-DC-01.allports.local
+| Not valid before: 2026-01-06T22:42:04
+|_Not valid after:  2026-07-08T22:42:04
+|_ssl-date: 2026-01-09T15:24:54+00:00; 0s from scanner time.
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+5986/tcp  open  ssl/http      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| ssl-cert: Subject: commonName=Cloudbase-Init WinRM
+| Not valid before: 2026-01-06T22:31:44
+|_Not valid after:  2036-01-05T22:31:44
+| tls-alpn: 
+|_  http/1.1
+|_http-title: Not Found
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Microsoft-HTTPAPI/2.0
+9389/tcp  open  mc-nmf        .NET Message Framing
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49668/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  msrpc         Microsoft Windows RPC
+49673/tcp open  msrpc         Microsoft Windows RPC
+57399/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+57400/tcp open  msrpc         Microsoft Windows RPC
+57405/tcp open  msrpc         Microsoft Windows RPC
+57422/tcp open  msrpc         Microsoft Windows RPC
+57424/tcp open  msrpc         Microsoft Windows RPC
+61633/tcp open  msrpc         Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=1/9%OT=53%CT=1%CU=32920%PV=Y%DS=2%DC=T%G=Y%TM=69611DC8
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=10E%TI=I%CI=I%TS=A)SEQ(SP=10
+OS:4%GCD=1%ISR=109%TI=I%CI=I%TS=A)SEQ(SP=104%GCD=1%ISR=10D%TI=I%CI=I%TS=A)S
+OS:EQ(SP=FC%GCD=1%ISR=106%TI=I%CI=I%TS=A)SEQ(SP=FC%GCD=1%ISR=10E%TI=I%CI=I%
+OS:TS=A)OPS(O1=M5B4NW8ST11%O2=M5B4NW8ST11%O3=M5B4NW8NNT11%O4=M5B4NW8ST11%O5
+OS:=M5B4NW8ST11%O6=M5B4ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=
+OS:FFDC)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M5B4NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%
+OS:A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0
+OS:%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S
+OS:=A%A=O%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%
+OS:RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+Service Info: Host: APT-DC-01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2026-01-09T15:24:49
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   3.77 ms 10.0.1.6
+
+Nmap scan report for 10.0.1.10
+Host is up (0.0013s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE SERVICE        VERSION
+22/tcp   open  ssh            OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 75:a1:61:52:3b:b7:fa:96:ee:bc:04:34:ae:44:a8:e9 (ECDSA)
+|_  256 d7:67:e2:32:1e:61:3d:33:96:1f:ce:8f:ff:ef:80:f1 (ED25519)
+6768/tcp open  bmc-perf-mgrd?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, RTSPRequest: 
+|     Lido Deck Climate Control
+|     ______________________
+|     LIDO DECK CLIMATE CONTROL SYSTEM
+|     ______________________
+|     COMMANDS:
+|     STATUS : View system status 
+|     temperature 
+|     REBOOT : Restart system 
+|     EXIT : Disconnect 
+|     ______________________
+|     Invalid choice. Goodbye.
+|   NULL: 
+|     Lido Deck Climate Control
+|     ______________________
+|     LIDO DECK CLIMATE CONTROL SYSTEM
+|     ______________________
+|     COMMANDS:
+|     STATUS : View system status 
+|     temperature 
+|     REBOOT : Restart system 
+|     EXIT : Disconnect 
+|_    ______________________
+9000/tcp open  cslistener?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, NULL, RPCCheck, SMBProgNeg, X11Probe: 
+|     Ballast Control System
+|     Authentication Required (LOGIN <user> <pass>)
+|   GetRequest, HTTPOptions, Help, Kerberos, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     Ballast Control System
+|     Authentication Required (LOGIN <user> <pass>)
+|_    Please LOGIN first.
+9091/tcp open  http           Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6768-TCP:V=7.95%I=7%D=1/9%Time=69611D1B%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,10B,"Lido\x20Deck\x20Climate\x20Control\n\t\t______________________\n
+SF:\t\tLIDO\x20DECK\x20CLIMATE\x20CONTROL\x20SYSTEM\n\t\t_________________
+SF:_____\n\t\tCOMMANDS:\n\t\t-\x20STATUS\t:\x20View\x20system\x20status\x2
+SF:0\n\t\t-\x20SET\t\t:\x20Set\x20temperature\x20\n\t\t-\x20REBOOT\t:\x20R
+SF:estart\x20system\x20\n\t\t-\x20EXIT\x20\t\t:\x20Disconnect\x20\n\t\t___
+SF:___________________\n\t\t:\x20")%r(GenericLines,125,"Lido\x20Deck\x20Cl
+SF:imate\x20Control\n\t\t______________________\n\t\tLIDO\x20DECK\x20CLIMA
+SF:TE\x20CONTROL\x20SYSTEM\n\t\t______________________\n\t\tCOMMANDS:\n\t\
+SF:t-\x20STATUS\t:\x20View\x20system\x20status\x20\n\t\t-\x20SET\t\t:\x20S
+SF:et\x20temperature\x20\n\t\t-\x20REBOOT\t:\x20Restart\x20system\x20\n\t\
+SF:t-\x20EXIT\x20\t\t:\x20Disconnect\x20\n\t\t______________________\n\t\t
+SF::\x20\nInvalid\x20choice\.\x20Goodbye\.\n")%r(GetRequest,125,"Lido\x20D
+SF:eck\x20Climate\x20Control\n\t\t______________________\n\t\tLIDO\x20DECK
+SF:\x20CLIMATE\x20CONTROL\x20SYSTEM\n\t\t______________________\n\t\tCOMMA
+SF:NDS:\n\t\t-\x20STATUS\t:\x20View\x20system\x20status\x20\n\t\t-\x20SET\
+SF:t\t:\x20Set\x20temperature\x20\n\t\t-\x20REBOOT\t:\x20Restart\x20system
+SF:\x20\n\t\t-\x20EXIT\x20\t\t:\x20Disconnect\x20\n\t\t___________________
+SF:___\n\t\t:\x20\nInvalid\x20choice\.\x20Goodbye\.\n")%r(HTTPOptions,125,
+SF:"Lido\x20Deck\x20Climate\x20Control\n\t\t______________________\n\t\tLI
+SF:DO\x20DECK\x20CLIMATE\x20CONTROL\x20SYSTEM\n\t\t______________________\
+SF:n\t\tCOMMANDS:\n\t\t-\x20STATUS\t:\x20View\x20system\x20status\x20\n\t\
+SF:t-\x20SET\t\t:\x20Set\x20temperature\x20\n\t\t-\x20REBOOT\t:\x20Restart
+SF:\x20system\x20\n\t\t-\x20EXIT\x20\t\t:\x20Disconnect\x20\n\t\t_________
+SF:_____________\n\t\t:\x20\nInvalid\x20choice\.\x20Goodbye\.\n")%r(RTSPRe
+SF:quest,125,"Lido\x20Deck\x20Climate\x20Control\n\t\t____________________
+SF:__\n\t\tLIDO\x20DECK\x20CLIMATE\x20CONTROL\x20SYSTEM\n\t\t_____________
+SF:_________\n\t\tCOMMANDS:\n\t\t-\x20STATUS\t:\x20View\x20system\x20statu
+SF:s\x20\n\t\t-\x20SET\t\t:\x20Set\x20temperature\x20\n\t\t-\x20REBOOT\t:\
+SF:x20Restart\x20system\x20\n\t\t-\x20EXIT\x20\t\t:\x20Disconnect\x20\n\t\
+SF:t______________________\n\t\t:\x20\nInvalid\x20choice\.\x20Goodbye\.\n"
+SF:);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9000-TCP:V=7.95%I=7%D=1/9%Time=69611D1B%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,47,"Ballast\x20Control\x20System\nAuthentication\x20Required\x20\(LOG
+SF:IN\x20<user>\x20<pass>\)\n>\x20")%r(GenericLines,47,"Ballast\x20Control
+SF:\x20System\nAuthentication\x20Required\x20\(LOGIN\x20<user>\x20<pass>\)
+SF:\n>\x20")%r(GetRequest,5D,"Ballast\x20Control\x20System\nAuthentication
+SF:\x20Required\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x20Please\x20LOGIN\x20
+SF:first\.\n>\x20")%r(HTTPOptions,5D,"Ballast\x20Control\x20System\nAuthen
+SF:tication\x20Required\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x20Please\x20L
+SF:OGIN\x20first\.\n>\x20")%r(RTSPRequest,5D,"Ballast\x20Control\x20System
+SF:\nAuthentication\x20Required\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x20Ple
+SF:ase\x20LOGIN\x20first\.\n>\x20")%r(RPCCheck,47,"Ballast\x20Control\x20S
+SF:ystem\nAuthentication\x20Required\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x
+SF:20")%r(DNSVersionBindReqTCP,47,"Ballast\x20Control\x20System\nAuthentic
+SF:ation\x20Required\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x20")%r(DNSStatus
+SF:RequestTCP,47,"Ballast\x20Control\x20System\nAuthentication\x20Required
+SF:\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x20")%r(Help,5D,"Ballast\x20Contro
+SF:l\x20System\nAuthentication\x20Required\x20\(LOGIN\x20<user>\x20<pass>\
+SF:)\n>\x20Please\x20LOGIN\x20first\.\n>\x20")%r(SSLSessionReq,5D,"Ballast
+SF:\x20Control\x20System\nAuthentication\x20Required\x20\(LOGIN\x20<user>\
+SF:x20<pass>\)\n>\x20Please\x20LOGIN\x20first\.\n>\x20")%r(TerminalServerC
+SF:ookie,5D,"Ballast\x20Control\x20System\nAuthentication\x20Required\x20\
+SF:(LOGIN\x20<user>\x20<pass>\)\n>\x20Please\x20LOGIN\x20first\.\n>\x20")%
+SF:r(TLSSessionReq,5D,"Ballast\x20Control\x20System\nAuthentication\x20Req
+SF:uired\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x20Please\x20LOGIN\x20first\.
+SF:\n>\x20")%r(Kerberos,5D,"Ballast\x20Control\x20System\nAuthentication\x
+SF:20Required\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x20Please\x20LOGIN\x20fi
+SF:rst\.\n>\x20")%r(SMBProgNeg,47,"Ballast\x20Control\x20System\nAuthentic
+SF:ation\x20Required\x20\(LOGIN\x20<user>\x20<pass>\)\n>\x20")%r(X11Probe,
+SF:47,"Ballast\x20Control\x20System\nAuthentication\x20Required\x20\(LOGIN
+SF:\x20<user>\x20<pass>\)\n>\x20");
+Device type: general purpose
+Running: Linux 5.X
+OS CPE: cpe:/o:linux:linux_kernel:5
+OS details: Linux 5.0 - 5.14
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT     ADDRESS
+1   0.51 ms 10.0.254.254
+2   3.52 ms 10.0.1.10
+
+Nmap scan report for 10.0.1.11
+Host is up (0.00060s latency).
+Not shown: 65528 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 50:f4:d5:28:cb:34:7b:5c:9c:57:96:7e:fe:98:9b:85 (ECDSA)
+|_  256 d9:ad:6c:12:2a:23:04:b6:1e:3c:7c:0a:7e:0b:a2:84 (ED25519)
+80/tcp   open  http       nginx 1.27.0
+|_http-title: LibreChat
+|_http-server-header: nginx/1.27.0
+|_http-cors: HEAD GET POST PUT DELETE PATCH
+| http-robots.txt: 1 disallowed entry 
+|_/api/
+443/tcp  open  ssl/http   nginx 1.27.0
+| http-robots.txt: 1 disallowed entry 
+|_/api/
+|_http-title: LibreChat
+| ssl-cert: Subject: commonName=*.allports.tours
+| Subject Alternative Name: DNS:*.allports.tours, DNS:allports.tours
+| Not valid before: 2025-12-09T22:06:01
+|_Not valid after:  2026-03-09T22:06:00
+|_http-server-header: nginx/1.27.0
+|_http-cors: HEAD GET POST PUT DELETE PATCH
+|_ssl-date: TLS randomness does not represent time
+3000/tcp open  ppp?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     X-Robots-Tag: noindex
+|     Access-Control-Allow-Origin: *
+|     Cache-Control: no-cache, no-store, must-revalidate
+|     Pragma: no-cache
+|     Expires: 0
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 4831
+|     ETag: W/"12df-Se8/9lQVoslVpt7VKxUF7By+CRM"
+|     Vary: Accept-Encoding
+|     Date: Fri, 09 Jan 2026 15:22:08 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en-US">
+|     <head>
+|     <meta charset="utf-8" />
+|     <base href="/" />
+|     <meta name="theme-color" content="#171717" />
+|     <meta name="mobile-web-app-capable" content="yes" />
+|     <meta name="apple-mobile-web-app-capable" content="yes" />
+|     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+|     <meta name="description" content="LibreChat - An open source chat application with support for multiple AI models" />
+|     <title>LibreChat</title>
+|     <link rel="icon" type="image/png" sizes="32x32" href
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 204 No Content
+|     X-Robots-Tag: noindex
+|     Access-Control-Allow-Origin: *
+|     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+|     Vary: Access-Control-Request-Headers
+|     Content-Length: 0
+|     Date: Fri, 09 Jan 2026 15:22:08 GMT
+|     Connection: close
+|   Help, NCP: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+7700/tcp open  em7-secom?
+| fingerprint-strings: 
+|   GenericLines: 
+|     HTTP/1.1 408 Request Timeout
+|     content-length: 0
+|     connection: close
+|     date: Fri, 09 Jan 2026 15:22:06 GMT
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     content-length: 651
+|     vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+|     content-type: text/html
+|     date: Fri, 09 Jan 2026 15:22:06 GMT
+|     <!doctype html><html lang="en"><head><meta name="robots" content="noindex"/><meta charset="utf-8"/><link rel="icon" href="/favicon-32x32.png"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Dashboard to test Meilisearch's search engine"/><link rel="apple-touch-icon" href="/logo.svg"/><link rel="manifest" href="/manifest.json"/><title>Mini-dashboard | Meilisearch</title><script defer="defer" src="/static/js/main.ce83f2db.js"></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     content-length: 0
+|     allow: GET
+|     vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+|     date: Fri, 09 Jan 2026 15:22:06 GMT
+|   JavaRMI: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 0
+|     connection: close
+|     date: Fri, 09 Jan 2026 15:22:01 GMT
+|   NULL: 
+|     HTTP/1.1 408 Request Timeout
+|     content-length: 0
+|     connection: close
+|     date: Fri, 09 Jan 2026 15:22:01 GMT
+|   RPCCheck, RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 0
+|     connection: close
+|_    date: Fri, 09 Jan 2026 15:22:06 GMT
+8045/tcp open  ssl/http   nginx 1.27.0
+|_http-title: Site doesn't have a title (application/json).
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: nginx/1.27.0
+| ssl-cert: Subject: commonName=*.allports.tours
+| Subject Alternative Name: DNS:*.allports.tours, DNS:allports.tours
+| Not valid before: 2025-12-09T22:06:01
+|_Not valid after:  2026-03-09T22:06:00
+8081/tcp open  http       Node.js Express framework
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=Authorization Required
+|_http-title: Error
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3000-TCP:V=7.95%I=7%D=1/9%Time=69611D20%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,1434,"HTTP/1\.1\x20200\x20OK\r\nX-Robots-Tag:\x20noindex\r\nAcc
+SF:ess-Control-Allow-Origin:\x20\*\r\nCache-Control:\x20no-cache,\x20no-st
+SF:ore,\x20must-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x204831\r\n
+SF:ETag:\x20W/\"12df-Se8/9lQVoslVpt7VKxUF7By\+CRM\"\r\nVary:\x20Accept-Enc
+SF:oding\r\nDate:\x20Fri,\x2009\x20Jan\x202026\x2015:22:08\x20GMT\r\nConne
+SF:ction:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"en-US\">\n\x
+SF:20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\"\x20/>\n\x20\x2
+SF:0\x20\x20<base\x20href=\"/\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"the
+SF:me-color\"\x20content=\"#171717\"\x20/>\n\x20\x20\x20\x20<meta\x20name=
+SF:\"mobile-web-app-capable\"\x20content=\"yes\"\x20/>\n\x20\x20\x20\x20<m
+SF:eta\x20name=\"apple-mobile-web-app-capable\"\x20content=\"yes\"\x20/>\n
+SF:\x20\x20\x20\x20<meta\x20name=\"apple-mobile-web-app-status-bar-style\"
+SF:\x20content=\"black-translucent\"\x20/>\n\x20\x20\x20\x20<meta\x20name=
+SF:\"description\"\x20content=\"LibreChat\x20-\x20An\x20open\x20source\x20
+SF:chat\x20application\x20with\x20support\x20for\x20multiple\x20AI\x20mode
+SF:ls\"\x20/>\n\x20\x20\x20\x20<title>LibreChat</title>\n\x20\x20\x20\x20<
+SF:link\x20rel=\"icon\"\x20type=\"image/png\"\x20sizes=\"32x32\"\x20href")
+SF:%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\
+SF:r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x
+SF:20close\r\n\r\n")%r(HTTPOptions,101,"HTTP/1\.1\x20204\x20No\x20Content\
+SF:r\nX-Robots-Tag:\x20noindex\r\nAccess-Control-Allow-Origin:\x20\*\r\nAc
+SF:cess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\
+SF:x20Access-Control-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20F
+SF:ri,\x2009\x20Jan\x202026\x2015:22:08\x20GMT\r\nConnection:\x20close\r\n
+SF:\r\n")%r(RTSPRequest,101,"HTTP/1\.1\x20204\x20No\x20Content\r\nX-Robots
+SF:-Tag:\x20noindex\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Contro
+SF:l-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\x20Access-C
+SF:ontrol-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20Fri,\x2009\x
+SF:20Jan\x202026\x2015:22:08\x20GMT\r\nConnection:\x20close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7700-TCP:V=7.95%I=7%D=1/9%Time=69611D19%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,6B,"HTTP/1\.1\x20408\x20Request\x20Timeout\r\ncontent-length:\x200\r\
+SF:nconnection:\x20close\r\ndate:\x20Fri,\x2009\x20Jan\x202026\x2015:22:01
+SF:\x20GMT\r\n\r\n")%r(JavaRMI,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nc
+SF:ontent-length:\x200\r\nconnection:\x20close\r\ndate:\x20Fri,\x2009\x20J
+SF:an\x202026\x2015:22:01\x20GMT\r\n\r\n")%r(GenericLines,6B,"HTTP/1\.1\x2
+SF:0408\x20Request\x20Timeout\r\ncontent-length:\x200\r\nconnection:\x20cl
+SF:ose\r\ndate:\x20Fri,\x2009\x20Jan\x202026\x2015:22:06\x20GMT\r\n\r\n")%
+SF:r(GetRequest,33E,"HTTP/1\.0\x20200\x20OK\r\ncontent-length:\x20651\r\nv
+SF:ary:\x20Origin,\x20Access-Control-Request-Method,\x20Access-Control-Req
+SF:uest-Headers\r\ncontent-type:\x20text/html\r\ndate:\x20Fri,\x2009\x20Ja
+SF:n\x202026\x2015:22:06\x20GMT\r\n\r\n<!doctype\x20html><html\x20lang=\"e
+SF:n\"><head><meta\x20name=\"robots\"\x20content=\"noindex\"/><meta\x20cha
+SF:rset=\"utf-8\"/><link\x20rel=\"icon\"\x20href=\"/favicon-32x32\.png\"/>
+SF:<meta\x20name=\"viewport\"\x20content=\"width=device-width,initial-scal
+SF:e=1\"/><meta\x20name=\"theme-color\"\x20content=\"#000000\"/><meta\x20n
+SF:ame=\"description\"\x20content=\"Dashboard\x20to\x20test\x20Meilisearch
+SF:'s\x20search\x20engine\"/><link\x20rel=\"apple-touch-icon\"\x20href=\"/
+SF:logo\.svg\"/><link\x20rel=\"manifest\"\x20href=\"/manifest\.json\"/><ti
+SF:tle>Mini-dashboard\x20\|\x20Meilisearch</title><script\x20defer=\"defer
+SF:\"\x20src=\"/static/js/main\.ce83f2db\.js\"></script></head><body><nosc
+SF:ript>You\x20need\x20to\x20enable\x20JavaScript\x20to\x20run\x20this\x20
+SF:app\.</noscript><div\x20id=\"root\"></div></body></html>")%r(HTTPOption
+SF:s,B4,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\ncontent-length:\x
+SF:200\r\nallow:\x20GET\r\nvary:\x20Origin,\x20Access-Control-Request-Meth
+SF:od,\x20Access-Control-Request-Headers\r\ndate:\x20Fri,\x2009\x20Jan\x20
+SF:2026\x2015:22:06\x20GMT\r\n\r\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\ncontent-length:\x200\r\nconnection:\x20close\r\ndate
+SF::\x20Fri,\x2009\x20Jan\x202026\x2015:22:06\x20GMT\r\n\r\n")%r(RPCCheck,
+SF:67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x200\r\nconne
+SF:ction:\x20close\r\ndate:\x20Fri,\x2009\x20Jan\x202026\x2015:22:06\x20GM
+SF:T\r\n\r\n");
+Device type: general purpose|router
+Running: Linux 5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 5.0 - 5.14, MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   0.37 ms 10.0.1.11
+
+WARNING: Service 10.0.1.13:8180 had already soft-matched rtsp, but now soft-matched sip; ignoring second value
+Nmap scan report for 10.0.1.13
+Host is up (0.0026s latency).
+Not shown: 65528 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 cb:4a:3d:82:d7:9e:8d:ab:26:e2:a9:ba:6c:99:28:65 (ECDSA)
+|_  256 62:64:ef:0d:2f:1a:77:da:a4:2d:38:19:e8:5b:50:cc (ED25519)
+3306/tcp open  mysql   MySQL 5.7.44
+| ssl-cert: Subject: commonName=MySQL_Server_5.7.44_Auto_Generated_Server_Certificate
+| Not valid before: 2026-01-07T23:34:36
+|_Not valid after:  2036-01-05T23:34:36
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.7.44
+|   Thread ID: 310
+|   Capabilities flags: 65535
+|   Some Capabilities: FoundRows, Support41Auth, IgnoreSpaceBeforeParenthesis, SupportsCompression, Speaks41ProtocolOld, DontAllowDatabaseTableColumn, LongColumnFlag, SwitchToSSLAfterHandshake, SupportsTransactions, InteractiveClient, ODBCClient, IgnoreSigpipes, SupportsLoadDataLocal, Speaks41ProtocolNew, LongPassword, ConnectWithDatabase, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: d}6/\x14xZ	%z8[Au\x12\x1B\D\x01\x04
+|_  Auth Plugin Name: mysql_native_password
+|_ssl-date: TLS randomness does not represent time
+8080/tcp open  http    Apache httpd 2.4.25 ((Debian))
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: All Ports - Onboard Navigation System
+|_http-server-header: Apache/2.4.25 (Debian)
+8081/tcp open  http    nginx
+|_http-cors: GET POST OPTIONS
+|_http-title: Swagger UI
+8090/tcp open  http    Jetty 9.4.48.v20220622
+|_http-server-header: Jetty(9.4.48.v20220622)
+|_http-cors: GET POST OPTIONS
+|_http-title: Site doesn't have a title (text/html;charset=utf-8).
+8091/tcp open  http    nginx
+|_http-title: Swagger UI
+|_http-cors: GET POST OPTIONS
+8180/tcp open  rtsp
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+|_http-title: Welcome to Keycloak
+| http-robots.txt: 1 disallowed entry 
+|_/
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     content-length: 58
+|     Content-Type: application/json
+|     {"error":"Unable to find matching target resource method"}
+|   GetRequest: 
+|     HTTP/1.0 500 Internal Server Error
+|     content-length: 25
+|     Content-Type: application/json
+|     Referrer-Policy: no-referrer
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     {"error":"unknown_error"}
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Allow: HEAD, POST, GET, OPTIONS
+|     content-length: 0
+|   RTSPRequest: 
+|     RTSP/1.0 200 OK
+|     Allow: HEAD, POST, GET, OPTIONS
+|     content-length: 0
+|   SIPOptions: 
+|     SIP/2.0 404 Not Found
+|_    content-length: 0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8180-TCP:V=7.95%I=7%D=1/9%Time=69611E3B%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,130,"HTTP/1\.0\x20500\x20Internal\x20Server\x20Error\r\ncontent
+SF:-length:\x2025\r\nContent-Type:\x20application/json\r\nReferrer-Policy:
+SF:\x20no-referrer\r\nStrict-Transport-Security:\x20max-age=31536000;\x20i
+SF:ncludeSubDomains\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Optio
+SF:ns:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n{\"er
+SF:ror\":\"unknown_error\"}")%r(HTTPOptions,47,"HTTP/1\.0\x20200\x20OK\r\n
+SF:Allow:\x20HEAD,\x20POST,\x20GET,\x20OPTIONS\r\ncontent-length:\x200\r\n
+SF:\r\n")%r(RTSPRequest,47,"RTSP/1\.0\x20200\x20OK\r\nAllow:\x20HEAD,\x20P
+SF:OST,\x20GET,\x20OPTIONS\r\ncontent-length:\x200\r\n\r\n")%r(FourOhFourR
+SF:equest,88,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncontent-length:\x2058\r\
+SF:nContent-Type:\x20application/json\r\n\r\n{\"error\":\"Unable\x20to\x20
+SF:find\x20matching\x20target\x20resource\x20method\"}")%r(SIPOptions,2C,"
+SF:SIP/2\.0\x20404\x20Not\x20Found\r\ncontent-length:\x200\r\n\r\n");
+Device type: general purpose
+Running: Linux 5.X
+OS CPE: cpe:/o:linux:linux_kernel:5
+OS details: Linux 5.0 - 5.14
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT      ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   15.44 ms 10.0.1.13
+
+Nmap scan report for 10.0.1.14
+Host is up (0.00083s latency).
+Not shown: 65531 filtered tcp ports (no-response)
+PORT     STATE  SERVICE       VERSION
+22/tcp   open   ssh           OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 3d:5f:d9:af:96:06:df:66:64:a3:c4:fc:5c:23:35:8e (ECDSA)
+|_  256 03:42:0c:a2:eb:72:47:cf:f6:63:a6:92:d5:72:e3:3a (ED25519)
+80/tcp   open   http          nginx 1.18.0
+|_http-title: Did not follow redirect to https://chat.allports.tours/
+|_http-server-header: CruissantServer
+443/tcp  open   ssl/http      nginx 1.18.0
+|_http-title: Did not follow redirect to https://chat.allports.tours/
+| ssl-cert: Subject: commonName=*.allports.tours
+| Subject Alternative Name: DNS:*.allports.tours, DNS:allports.tours
+| Not valid before: 2025-12-09T22:06:01
+|_Not valid after:  2026-03-09T22:06:00
+|_http-server-header: CruissantServer
+|_ssl-date: TLS randomness does not represent time
+5001/tcp closed commplex-link
+Device type: general purpose|router
+Running: Linux 5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 5.0 - 5.14, MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 5001/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   2.48 ms 10.0.1.14
+
+Nmap scan report for 10.0.1.20
+Host is up (0.0027s latency).
+Not shown: 65519 closed tcp ports (reset)
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2026-01-09T15:28:19+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=Deckhand-01.allports.local
+| Not valid before: 2026-01-06T23:34:13
+|_Not valid after:  2026-07-08T23:34:13
+| rdp-ntlm-info: 
+|   Target_Name: APT
+|   NetBIOS_Domain_Name: APT
+|   NetBIOS_Computer_Name: DECKHAND-01
+|   DNS_Domain_Name: allports.local
+|   DNS_Computer_Name: Deckhand-01.allports.local
+|   DNS_Tree_Name: allports.local
+|   Product_Version: 10.0.20348
+|_  System_Time: 2026-01-09T15:28:03+00:00
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+5986/tcp  open  ssl/http      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=Cloudbase-Init WinRM
+| Not valid before: 2026-01-06T23:28:14
+|_Not valid after:  2036-01-05T23:28:14
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49669/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  msrpc         Microsoft Windows RPC
+49671/tcp open  msrpc         Microsoft Windows RPC
+49700/tcp open  msrpc         Microsoft Windows RPC
+49701/tcp open  msrpc         Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=1/9%OT=135%CT=1%CU=32674%PV=Y%DS=2%DC=T%G=Y%TM=69611E9
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=105%TI=I%CI=I%TS=A)SEQ(SP=1
+OS:03%GCD=1%ISR=10B%TI=I%CI=I%TS=A)SEQ(SP=106%GCD=1%ISR=109%TI=I%CI=I%TS=A)
+OS:SEQ(SP=107%GCD=1%ISR=107%TI=I%CI=I%TS=A)SEQ(SP=FC%GCD=1%ISR=109%TI=I%CI=
+OS:I%TS=A)OPS(O1=M5B4NW8ST11%O2=M5B4NW8ST11%O3=M5B4NW8NNT11%O4=M5B4NW8ST11%
+OS:O5=M5B4NW8ST11%O6=M5B4ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W
+OS:6=FFDC)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M5B4NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=
+OS:O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD
+OS:=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0
+OS:%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=
+OS:G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2026-01-09T15:28:04
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT      ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   15.70 ms 10.0.1.20
+
+Nmap scan report for 10.0.1.21
+Host is up (0.00050s latency).
+Not shown: 65519 closed tcp ports (reset)
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: APT
+|   NetBIOS_Domain_Name: APT
+|   NetBIOS_Computer_Name: DECKHAND-02
+|   DNS_Domain_Name: allports.local
+|   DNS_Computer_Name: Deckhand-02.allports.local
+|   DNS_Tree_Name: allports.local
+|   Product_Version: 10.0.20348
+|_  System_Time: 2026-01-09T15:28:07+00:00
+| ssl-cert: Subject: commonName=Deckhand-02.allports.local
+| Not valid before: 2026-01-06T23:37:57
+|_Not valid after:  2026-07-08T23:37:57
+|_ssl-date: 2026-01-09T15:28:19+00:00; 0s from scanner time.
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+5986/tcp  open  ssl/http      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+| tls-alpn: 
+|_  http/1.1
+|_http-server-header: Microsoft-HTTPAPI/2.0
+| ssl-cert: Subject: commonName=Cloudbase-Init WinRM
+| Not valid before: 2026-01-06T23:31:58
+|_Not valid after:  2036-01-05T23:31:58
+|_ssl-date: TLS randomness does not represent time
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49668/tcp open  msrpc         Microsoft Windows RPC
+49669/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  msrpc         Microsoft Windows RPC
+49671/tcp open  msrpc         Microsoft Windows RPC
+49701/tcp open  msrpc         Microsoft Windows RPC
+49702/tcp open  msrpc         Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=1/9%OT=135%CT=1%CU=38986%PV=Y%DS=2%DC=T%G=Y%TM=69611E9
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10C%TI=I%CI=I%TS=A)SEQ(SP=1
+OS:06%GCD=1%ISR=107%TI=I%CI=I%TS=A)SEQ(SP=106%GCD=1%ISR=10A%TI=I%CI=I%TS=A)
+OS:SEQ(SP=107%GCD=1%ISR=107%TI=I%CI=I%TS=A)SEQ(SP=108%GCD=1%ISR=108%TI=I%CI
+OS:=I%TS=A)OPS(O1=M5B4NW8ST11%O2=M5B4NW8ST11%O3=M5B4NW8NNT11%O4=M5B4NW8ST11
+OS:%O5=M5B4NW8ST11%O6=M5B4ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%
+OS:W6=FFDC)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M5B4NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S
+OS:=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%R
+OS:D=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=
+OS:0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID
+OS:=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2026-01-09T15:28:12
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   0.53 ms 10.0.1.21
+
+Nmap scan report for 10.0.1.30
+Host is up (0.0024s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 4a:64:bc:b2:8a:af:44:03:aa:98:49:67:3d:31:50:28 (ECDSA)
+|_  256 7e:3b:56:72:10:be:44:ae:0d:00:6e:96:dc:af:99:6c (ED25519)
+8096/tcp open  http    Microsoft Kestrel httpd
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Kestrel
+| http-title: Jellyfin
+|_Requested resource was web/
+Device type: general purpose|router
+Running: Linux 5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 5.0 - 5.14, MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT      ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   15.28 ms 10.0.1.30
+
+Nmap scan report for 10.0.1.99
+Host is up (0.0026s latency).
+Not shown: 65530 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 9b:3e:0c:8d:db:7a:04:11:1a:09:46:ec:01:b7:55:8d (ECDSA)
+|_  256 1d:53:a1:57:10:83:61:f6:a8:6b:e6:bc:01:4d:da:ea (ED25519)
+80/tcp   open  http     Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+443/tcp  open  ssl/http Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+| ssl-cert: Subject: commonName=*.allports.tours
+| Subject Alternative Name: DNS:*.allports.tours
+| Not valid before: 2025-08-17T14:27:45
+|_Not valid after:  2025-11-15T14:27:44
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+3306/tcp open  mysql    MySQL 8.0.43
+| ssl-cert: Subject: commonName=MySQL_Server_8.0.43_Auto_Generated_Server_Certificate
+| Not valid before: 2026-01-07T23:37:43
+|_Not valid after:  2036-01-05T23:37:43
+|_ssl-date: TLS randomness does not represent time
+| mysql-info: 
+|   Protocol: 10
+|   Version: 8.0.43
+|   Thread ID: 152
+|   Capabilities flags: 65535
+|   Some Capabilities: FoundRows, Support41Auth, IgnoreSpaceBeforeParenthesis, SupportsCompression, Speaks41ProtocolOld, DontAllowDatabaseTableColumn, LongColumnFlag, SwitchToSSLAfterHandshake, SupportsTransactions, InteractiveClient, ODBCClient, IgnoreSigpipes, SupportsLoadDataLocal, Speaks41ProtocolNew, LongPassword, ConnectWithDatabase, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: j}\x1B\x01|(5\x0Bv%y%%o,s~xa\x05
+|_  Auth Plugin Name: caching_sha2_password
+8080/tcp open  ssl/http Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+| ssl-cert: Subject: commonName=*.allports.tours
+| Subject Alternative Name: DNS:*.allports.tours
+| Not valid before: 2025-08-17T14:27:45
+|_Not valid after:  2025-11-15T14:27:44
+Device type: general purpose|router
+Running: Linux 5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 5.0 - 5.14, MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT      ADDRESS
+-   Hop 1 is the same as for 10.0.1.10
+2   15.53 ms 10.0.1.99
+
+Nmap scan report for 10.0.1.254
+Host is up (0.00038s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE    SERVICE VERSION
+9697/tcp filtered unknown
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT     ADDRESS
+1   0.32 ms 10.0.1.254
+
+Post-scan script results:
+| clock-skew: 
+|   0s: 
+|     10.0.1.6
+|     10.0.1.20
+|_    10.0.1.21
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan  9 10:28:21 2026 -- 11 IP addresses (11 hosts up) scanned in 405.80 seconds
+```

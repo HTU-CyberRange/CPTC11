@@ -1,0 +1,27 @@
+[*] First time use detected
+[*] Creating home directory structure
+[*] Creating missing folder logs
+[*] Creating missing folder modules
+[*] Creating missing folder protocols
+[*] Creating missing folder workspaces
+[*] Creating missing folder obfuscated_scripts
+[*] Creating missing folder screenshots
+[*] Creating missing folder logs/sam
+[*] Creating missing folder logs/lsa
+[*] Creating missing folder logs/ntds
+[*] Creating missing folder logs/dpapi
+[*] Creating default workspace
+[*] Initializing SSH protocol database
+[*] Initializing WMI protocol database
+[*] Initializing SMB protocol database
+[*] Initializing WINRM protocol database
+[*] Initializing RDP protocol database
+[*] Initializing VNC protocol database
+[*] Initializing LDAP protocol database
+[*] Initializing MSSQL protocol database
+[*] Initializing FTP protocol database
+[*] Initializing NFS protocol database
+[*] Copying default configuration file
+SMB                      10.0.1.20       445    DECKHAND-01      [*] Windows Server 2022 Build 20348 x64 (name:DECKHAND-01) (domain:allports.local) (signing:False) (SMBv1:False)
+SMB                      10.0.1.21       445    DECKHAND-02      [*] Windows Server 2022 Build 20348 x64 (name:DECKHAND-02) (domain:allports.local) (signing:False) (SMBv1:False)
+Running nxc against 2 targets ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00

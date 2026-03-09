@@ -1,0 +1,115 @@
+BALLAST CONTROL SYSTEM EXPLOITATION - QUICK START
+=================================================
+
+TARGET: 10.0.1.10:9000 (Ballast Control System)
+
+SCRIPT LOCATION:
+  /home/pentester/cptc/hosts/10.0.1.10-custom-control/scripts/ballast-exploit.py
+
+EVIDENCE LOCATION:
+  /home/pentester/cptc/hosts/10.0.1.10-custom-control/evidence/ballast-exploitation/
+
+QUICK COMMANDS:
+---------------
+
+# Run ALL tests (recommended for initial run)
+python3 /home/pentester/cptc/hosts/10.0.1.10-custom-control/scripts/ballast-exploit.py --all
+
+# Run specific test phases
+python3 ballast-exploit.py --phase connection      # Basic connection test
+python3 ballast-exploit.py --phase unauth          # Unauthenticated commands
+python3 ballast-exploit.py --phase sqli            # SQL injection
+python3 ballast-exploit.py --phase cmdinj          # Command injection
+python3 ballast-exploit.py --phase bypass          # Auth bypass techniques
+python3 ballast-exploit.py --phase bruteforce      # Credential brute force
+python3 ballast-exploit.py --phase fuzzing         # Protocol fuzzing
+python3 ballast-exploit.py --phase overflow        # Buffer overflow
+
+# Faster testing (reduce delay to 1 second)
+python3 ballast-exploit.py --all --delay 1.0
+
+# Get help
+python3 ballast-exploit.py --help
+
+
+TEST PHASES:
+------------
+1. Connection       - Verify connectivity and retrieve banner
+2. Unauth           - Test commands without authentication
+3. SQL Injection    - Test SQLi in login fields
+4. Cmd Injection    - Test OS command injection
+5. Auth Bypass      - Test null bytes, case variations, etc.
+6. Bruteforce       - Test common credentials
+7. Fuzzing          - Test malformed inputs
+8. Buffer Overflow  - Test with large payloads
+
+
+CREDENTIALS TESTED:
+-------------------
+admin/admin, admin/password, admin/123456
+root/root, root/password
+ballast/ballast, ballast/password
+operator/operator, operator/password
+captain/captain, cruise/cruise
+allports/allports
++ more variations
+
+
+OUTPUT FILES:
+-------------
+ballast-exploit-TIMESTAMP.log          - Full execution log
+01-banner.txt                          - Connection test results
+02-unauthenticated-commands.txt        - Pre-auth command results
+03-sql-injection-tests.txt             - SQL injection results
+04-command-injection-tests.txt         - Command injection results
+05-auth-bypass-tests.txt               - Auth bypass results
+06-credential-bruteforce.txt           - Credential testing results
+07-protocol-fuzzing.txt                - Fuzzing results
+08-buffer-overflow-tests.txt           - Overflow testing results
+SUCCESS-username-password-TIME.txt     - Authenticated session (if successful)
+SUCCESSFUL_CREDENTIALS.txt             - Summary of successful logins
+
+
+SAFETY FEATURES:
+----------------
+- 2 second delay between attempts (configurable)
+- 10 second socket timeout
+- Graceful error handling
+- Detailed logging
+- Can be interrupted safely with Ctrl+C
+
+
+EXAMPLE SESSION:
+----------------
+$ cd /home/pentester/cptc/hosts/10.0.1.10-custom-control/scripts
+$ python3 ballast-exploit.py --all
+
+[Script runs all test phases...]
+
+$ ls -l ../evidence/ballast-exploitation/
+[View generated evidence files]
+
+$ cat ../evidence/ballast-exploitation/SUCCESSFUL_CREDENTIALS.txt
+[View any successful credentials found]
+
+
+TROUBLESHOOTING:
+----------------
+Connection refused:
+  - Verify service is running: nc -zv 10.0.1.10 9000
+  - Check network connectivity
+
+Timeout errors:
+  - Increase timeout: --timeout 20
+
+Permission errors:
+  - Check write permissions on evidence directory
+
+
+NOTES:
+------
+- Default delay is 2 seconds to avoid overwhelming the service
+- All actions are logged for audit trail
+- Successful credentials are highlighted in console and saved
+- Script uses Python 3 with only standard library (no dependencies)
+- Safe to run multiple times - each run creates new timestamped files

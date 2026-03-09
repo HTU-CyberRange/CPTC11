@@ -1,0 +1,2 @@
+WARNING: option --ssl-verify-server-cert is disabled, because of an insecure passwordless login.
+ERROR 1045 (28000): Access denied for user 'root'@'10.0.254.203' (using password: NO)

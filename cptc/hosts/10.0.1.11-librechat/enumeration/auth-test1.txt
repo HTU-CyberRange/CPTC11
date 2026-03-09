@@ -1,0 +1,81 @@
+Note: Unnecessary use of -X or --request, POST is already inferred.
+* Host penny.allports.tours:443 was resolved.
+* IPv6: (none)
+* IPv4: 10.0.1.11
+*   Trying 10.0.1.11:443...
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [1701 bytes data]
+* SSL Trust: peer verification disabled
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [19 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [942 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*   subject: CN=*.allports.tours
+*   start date: Dec  9 22:06:01 2025 GMT
+*   expire date: Mar  9 22:06:00 2026 GMT
+*   issuer: C=US; O=Let's Encrypt; CN=E8
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+* SSL certificate OpenSSL verify result: unable to get local issuer certificate (20)
+*  SSL certificate verification failed, continuing anyway!
+* Established connection to penny.allports.tours (10.0.1.11 port 443) from 10.0.254.203 port 45192 
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://penny.allports.tours/api/auth/login
+* [HTTP/2] [1] [:method: POST]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: penny.allports.tours]
+* [HTTP/2] [1] [:path: /api/auth/login]
+* [HTTP/2] [1] [user-agent: curl/8.17.0]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [content-type: application/json]
+* [HTTP/2] [1] [content-length: 51]
+} [5 bytes data]
+> POST /api/auth/login HTTP/2
+> Host: penny.allports.tours
+> User-Agent: curl/8.17.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 51
+> 
+} [51 bytes data]
+* upload completely sent off: 51 bytes
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [57 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [57 bytes data]
+< HTTP/2 200 
+< server: nginx/1.27.0
+< date: Fri, 09 Jan 2026 20:49:58 GMT
+< content-type: application/json; charset=utf-8
+< content-length: 716
+< x-robots-tag: noindex
+< access-control-allow-origin: *
+< x-ratelimit-limit: 10
+< x-ratelimit-remaining: 8
+< x-ratelimit-reset: 1767992086
+< set-cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjE1YjhhYTFkOGYxYmQyZWNmYmM1NiIsInNlc3Npb25JZCI6IjY5NjE2OWY2YTFkOGYxYmQyZWNmYmVmNiIsImlhdCI6MTc2Nzk5MTc5OCwiZXhwIjoxNzY4NTk2NTk4fQ.zvm38kuurvwkNaPMkuWMA6RTfzCf3_b3LOxqp5wCj80; Path=/; Expires=Fri, 16 Jan 2026 20:49:58 GMT; HttpOnly; Secure; SameSite=Strict
+< set-cookie: token_provider=librechat; Path=/; Expires=Fri, 16 Jan 2026 20:49:58 GMT; HttpOnly; Secure; SameSite=Strict
+< etag: W/"2cc-D+NKuXPeUXpQa48SRoNCLnDLsY8"
+< vary: Accept-Encoding
+< 
+{ [716 bytes data]
+* Connection #0 to host penny.allports.tours:443 left intact
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjE1YjhhYTFkOGYxYmQyZWNmYmM1NiIsInVzZXJuYW1lIjoicGVudGVzdGVyIiwicHJvdmlkZXIiOiJsZGFwIiwiZW1haWwiOiJwZW50ZXN0ZXJAbGRhcC5sb2NhbCIsImlhdCI6MTc2Nzk5MTc5OCwiZXhwIjoxNzY3OTkyNjk4fQ.ryS6SeoK4l-xK6QTkuZQnFnGuSiTtnJr5jIcoAuHXB8","user":{"_id":"69615b8aa1d8f1bd2ecfbc56","name":" ","username":"pentester","email":"pentester@ldap.local","emailVerified":true,"provider":"ldap","role":"USER","ldapId":"pentester","plugins":[],"twoFactorEnabled":false,"termsAccepted":true,"personalization":{"memories":true,"_id":"69615b8aa1d8f1bd2ecfbc55"},"refreshToken":[],"createdAt":"2026-01-09T19:48:26.574Z","updatedAt":"2026-01-09T20:49:58.637Z","id":"69615b8aa1d8f1bd2ecfbc56"}}
