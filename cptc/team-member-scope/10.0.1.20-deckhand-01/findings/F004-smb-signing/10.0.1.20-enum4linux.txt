@@ -1,1 +1,0 @@
-/home/pentester/cptc/scripts/enum-windows-smb.sh: line 17: enum4linux-ng: command not found

@@ -1,2 +1,0 @@
-Command 'crackmapexec' not found, but can be installed with:
-sudo apt install crackmapexec
